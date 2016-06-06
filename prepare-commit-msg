@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative 'githooks/prepare_commit_msg/github_issue'
+
+# If you are allowed to perform a commit (pre-commit checks this),
+# then we pre-populate the commit message here.
+Githooks::PrepareCommitMsg::GithubIssue.new.call

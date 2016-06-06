@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative 'githooks/pre_commit/author_name'
+require_relative 'githooks/pre_commit/author_email'
+require_relative 'githooks/pre_commit/merge_conflicts'
+
+# Checks that determine whether you are allowed to perform a commit at all.
+# You even get to choose a commit message if you are not allowed.
+Githooks::PreCommit::AuthorName.new.call
+Githooks::PreCommit::AuthorEmail.new.call
+Githooks::PreCommit::MergeConflicts.new.call

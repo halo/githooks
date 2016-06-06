@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative 'githooks/commit_msg/github_issue'
+
+# Checks that look at the message the user entered.
+# This is your last chance to abort the commit.
+Githooks::CommitMsg::GithubIssue.new.call
