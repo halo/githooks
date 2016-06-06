@@ -12,7 +12,7 @@ module Githooks
       end
 
       def only_github_issue?
-        message.match /\s*#\d*\s*/
+        message.match(/\s*#\d*\s*/)
       end
 
       def message

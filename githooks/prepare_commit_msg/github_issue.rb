@@ -22,7 +22,7 @@ module Githooks
       end
 
       def feature_branch
-        branch_name.match /(\d+)-.*/i
+        branch_name.match(/(\d+)-.*/i)
       end
 
       def issue_id

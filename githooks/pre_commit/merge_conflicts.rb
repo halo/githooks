@@ -18,7 +18,7 @@ module Githooks
       private
 
       def modified_files
-        `git diff --cached --diff-filter=M --name-only`.gsub("\n", ' ')
+        `git diff --cached --diff-filter=M --name-only`.tr("\n", ' ')
       end
 
       def modified_files_with_conflicts
