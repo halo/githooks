@@ -12,11 +12,11 @@ module Githooks
       end
 
       def only_github_issue?
-        message.match(/\s*#\d+\s*/)
+        !message.match(/[a-z]/)
       end
 
       def message
-        File.read(path)
+        File.read(path).split("\n").first.to_s
       end
 
       def path
