@@ -18,7 +18,7 @@ module Githooks
       end
 
       def branch_name
-        `git rev-parse --abbrev-ref HEAD`.chomp
+        `git symbolic-ref --short HEAD`.chomp
       end
 
       def feature_branch

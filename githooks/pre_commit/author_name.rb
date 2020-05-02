@@ -1,7 +1,6 @@
 module Githooks
   module PreCommit
     class AuthorName
-
       def call
         die unless username_configured?
       end
@@ -16,7 +15,6 @@ module Githooks
       def username_configured?
         `git config --get-all user.name`.chomp != ''
       end
-
     end
   end
 end
